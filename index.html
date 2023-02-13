@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Chewy&family=Kolker+Brush&family=Lora&family=Oswald&display=swap" rel="stylesheet">
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <div id="landing-page">
+    <h1 id="text">Florida-Man-Generator</h1>
+    <script>
+        const text = document.getElementById('text');
+        text.innerHTML = text.textContent.replace
+            (/\S/g,"<span>$&</span>");
+        const ele = document.querySelectorAll('span');
+            for(var i = 1; i<ele.length; i++ ){
+            ele[i].style.transform="rotate("+i*14.5+"deg)";
+        }
+    </script>
+        <img id="florida-logo" src="state-of-florida.png">
+    </div>
+
+    <div id="action-page">
+        <div id="nav-bar">
+            <ul id="top-10">
+                <li id="header">Top Ten List</li>
+                <li id="list-item-first" class="list-item"><span id="no1">#1</span>#1 Florida Man Article</li>
+                <li id="list-item-second" class="list-item"><span id="no2">#2</span>#2 Florida Man Article</li>
+                <li id="list-item-third" class="list-item"><span id="no3">#3</span>#3 Florida Man Article</li>
+                <li class="list-item">Florida Man Article</li>
+                <li class="list-item">Florida Man Article</li>
+                <li class="list-item">Florida Man Article</li>
+                <li class="list-item">Florida Man Article</li>
+                <li class="list-item">Florida Man Article</li>
+                <li class="list-item">Florida Man Article</li>
+                <li class="list-item">Florida Man Article</li>
+            </ul>
+
+        </div>
+        <div id="display-card">
+            <form id="form-container">
+                <h1 id="instructional-text">Enter Date:</h1>
+                <input id="text-box" type="text" placeholder="MM/DD">
+                <input id="submit-button" type="submit">
+            </form>
+            <div id="render-card-here">
+                <img src="" alt="">
+                <h2></h2>
+                <p></p>
+                <p></p>
+                <link>
+                <button></button>
+                <button></button>
+            </div>
+         </div>
+
+    </div>
+  </body>
+</html>
