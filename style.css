@@ -115,7 +115,7 @@ li:hover{
 
 #display-card{
     display: grid;
-    grid-template-rows: 2fr 8fr;
+    grid-template-rows: 2.5fr 7.5fr;
 }
 
 #form-container{
@@ -133,14 +133,14 @@ li:hover{
 .list-item{
     font-family: 'Caveat Brush', cursive;
     color: #F16F29;
-    font-size: 40px;
+    font-size: auto;
     text-align: center;
     padding-top: 3px;
 }
 
 #header{
     border:none;
-    font-size: 60px;
+    font-size: 35px;
     text-align: center;
 
 }
