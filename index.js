@@ -117,7 +117,7 @@ function renderFmDetails(fm) {
 
         currentFM.likes++
         let newLikes = currentFM.likes
-        fmLike.textContent = `${newLikes} likes`
+        fmLike.textContent = `${newLikes}`
         
         fetch(`http://localhost:3000/florida_man/${id}`, {
             method: "PATCH",
@@ -139,7 +139,7 @@ function renderFmDetails(fm) {
 
         currentFM.dislikes++
         let newDislikes = currentFM.dislikes
-        fmDislike.textContent = `${newDislikes} dislikes`
+        fmDislike.textContent = `${newDislikes}`
         
         fetch(`http://localhost:3000/florida_man/${id}`, {
             method: "PATCH",
