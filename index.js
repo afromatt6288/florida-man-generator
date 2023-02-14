@@ -2,13 +2,16 @@ let currentFM
 
 let floridaLogo = document.getElementById("florida-logo");
 let listItems = document.querySelectorAll(".list-item");
+
 floridaLogo.addEventListener("click", () => {
     document.getElementById("action-page").style.zIndex = "1";
 })
+
 fetch("http://localhost:3000/florida_man")
 .then(response => response.json())
 .then(fmData => {
         grabTopTen(fmData)
+        grabByDate(fmData)
         // renderTopTen()
         // renderFmDetails()
         // topTenClick()
@@ -34,10 +37,18 @@ function renderTopTen(topTen){
     })
 }
 
+function grabByDate(fmData){
+    let dateSubmitForm = document.querySelector("#form-container")
+    dateSubmitForm.addEventListener("submit", (e) => {
+        e.preventDefault()
+        const dateEntry = e.target['text-box'].value
+        fmByDate = fmData.find(fm => fm.date === dateEntry)
+        renderFmDetails(fmByDate)
+    })
+}
 
 function topTenClick(fm) {   
     fmTitle1.addEventListener('click', (e) => {
-        console.log(fm)
         renderFmDetails(fm)
     })
 }
