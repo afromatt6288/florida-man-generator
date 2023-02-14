@@ -126,8 +126,11 @@ li:hover{
     padding: 5px;
 }
 
-#render-card-here{
+#render-card{
     border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .list-item{
@@ -157,3 +160,23 @@ li:hover{
     border-radius: 40px;
 }
 
+#image{
+    width:50%;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+#card-details{
+    align-items: right;
+}
+
+#render-card-here{
+    background-color: #003366;
+    height: 80%;
+    overflow-x: scroll;
+
+}
+
+#article{
+    overflow-x: scroll;
+}
