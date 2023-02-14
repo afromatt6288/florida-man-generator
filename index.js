@@ -33,7 +33,7 @@ fetch("http://localhost:3000/florida_man")
     grabTopTen(fmData)
     grabByDate(fmData)
     // renderTopTen() // called within other functions
-    // renderFmDetails() // called within other functions
+    renderFmDetails(fmData[0]) // used to populate card with 1st place entry, and also called within other functions
     // topTenClick() // called within other functions
 })
 
@@ -55,6 +55,7 @@ function renderTopTen(topTen){
         fmSnippet.textContent = fm.snippet
         topTenList.append(fmSnippet)  
 
+        //renderFmDetails(fm[0])
         topTenClick(fm)
     })
 }
