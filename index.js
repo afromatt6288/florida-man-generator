@@ -8,7 +8,7 @@ let landingPage = document.querySelector('#landing-page')
 floridaLogo.addEventListener('mouseover', () => {
     let clickHere = document.createElement('p')
     clickHere.id = "click-here"
-    clickHere.textContent = "Click Here!!"
+    clickHere.textContent = "Click Here!! ⬈"
     landingPage.append(clickHere)
 })
 
