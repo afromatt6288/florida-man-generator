@@ -34,13 +34,13 @@ function renderTopTen(topTen){
     })
 }
 
+
 function topTenClick(fm) {   
     fmTitle1.addEventListener('click', (e) => {
         console.log(fm)
         renderFmDetails(fm)
     })
 }
-
 
 
 function renderFmDetails(fm) {
