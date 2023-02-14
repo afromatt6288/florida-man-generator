@@ -196,6 +196,7 @@ li:hover{
 #article-container{
     height: 60%;
     overflow-x: scroll;
+    overflow-y: none;
 }
 
 #article{
