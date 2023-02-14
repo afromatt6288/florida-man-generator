@@ -7,8 +7,8 @@
     <title>HTML 5 Boilerplate</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Chewy&family=Kolker+Brush&family=Lora&family=Oswald&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Chewy&family=Jua&family=Kolker+Brush&family=Lora&family=Oswald&display=swap" rel="stylesheet">
     <script defer src="index.js"></script>
   </head>
   <body>
@@ -35,20 +35,25 @@
         </div>
         <div id="display-card">
             <form id="form-container">
-                <h1 id="instructional-text">Enter Date:</h1>
+                <h1 id="instructional-text">Enter Date</h1>
                 <input id="text-box" type="text" placeholder="MM/DD">
                 <input id="submit-button" type="submit">
+                <img  id="randomize" src="Images/random-dice.png">
             </form>
             <div id="render-card">
                 <div id="render-card-here">
+                    <div id="image-container">
                     <img id=image src="" />
+                    </div>
                     <div id="card-details">
-                        <h2 id="date">MM/DD</h2>
                         <h2 id="title">Title</h2>
-                        <p id="article">Article</p>
+                        <h2 id="date">MM/DD</h2>
+                        <div id="article-container">
+                            <p id="article">Article</p>
+                        </div>
                         <a id="link" href="url">Link to Article</a>
-                        <button class="like" id="">0 likes</button>
-                        <button class="dislike" id="">0 dislikes</button>
+                        <button id="like">0 likes</button>
+                        <button id="dislike">0 dislikes</button>
                     </div>
                 </div>
             </div>
