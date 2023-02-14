@@ -41,10 +41,10 @@ function grabTopTen(fmData){
 function renderTopTen(topTen){
     let topTenList = document.querySelector('#top-10')
     topTen.forEach(fm => {
-        fmTitle1 = document.createElement('li')
-        fmTitle1.classList.add("list-item")
-        fmTitle1.textContent = fm.title
-        topTenList.append(fmTitle1)  
+        fmSnippet = document.createElement('li')
+        fmSnippet.classList.add("list-item")
+        fmSnippet.textContent = fm.snippet
+        topTenList.append(fmSnippet)  
 
         topTenClick(fm)
     })
@@ -61,7 +61,7 @@ function grabByDate(fmData){
 }
 
 function topTenClick(fm) {   
-    fmTitle1.addEventListener('click', (e) => {
+    fmSnippet.addEventListener('click', (e) => {
         renderFmDetails(fm)
     })
 }
@@ -72,7 +72,7 @@ function renderFmDetails(fm) {
     // selectors for fm details
     let fmDetails = document.querySelector('#render-card-here')
     let fmDate = document.querySelector('#date')
-    let fmTitle2 = document.querySelector('#title')
+    let fmTitle = document.querySelector('#title')
     let fmImage = document.querySelector('#image')
     let fmArticle = document.querySelector('#article')
     let fmArticleLink = document.querySelector('#link')
@@ -80,7 +80,7 @@ function renderFmDetails(fm) {
     let fmDislike = document.querySelector('.dislike')
     
     fmDate.textContent = currentFM.date
-    fmTitle2.textContent = currentFM.title
+    fmTitle.textContent = currentFM.title
     fmImage.src = currentFM.image
     fmArticle.textContent = currentFM.Article
     fmArticleLink.href = currentFM.Article_link
