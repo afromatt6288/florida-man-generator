@@ -99,7 +99,9 @@ function renderFmDetails(fm) {
     let fmArticle = document.querySelector('#article')
     let fmArticleLink = document.querySelector('#link')
     let fmLike = document.querySelector('.like')
+    let fmLikeButton = document.querySelector('#up-arrow')
     let fmDislike = document.querySelector('.dislike')
+    let fmDislikeButton = document.querySelector('#down-arrow')
     
     fmDate.textContent = currentFM.date
     fmTitle.textContent = currentFM.title
@@ -112,8 +114,8 @@ function renderFmDetails(fm) {
     //// Like Button Functionality ////
     
     fmLike.id = currentFM.id
-    fmLike.addEventListener('click', (e) => {
-        let id = e.target.id
+    fmLikeButton.addEventListener('click', (e) => {
+        let id = fmLike.id
 
         currentFM.likes++
         let newLikes = currentFM.likes
@@ -134,8 +136,8 @@ function renderFmDetails(fm) {
     //// Dislike Button Functionality ////
 
     fmDislike.id = currentFM.id
-    fmDislike.addEventListener('click', (e) => {
-        let id = e.target.id
+    fmDislikeButton.addEventListener('click', (e) => {
+        let id = fmDislike.id
 
         currentFM.dislikes++
         let newDislikes = currentFM.dislikes
