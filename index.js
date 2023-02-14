@@ -3,6 +3,19 @@ let currentFM
 let floridaLogo = document.getElementById("florida-logo");
 let listItems = document.querySelectorAll(".list-item");
 
+let landingPage = document.querySelector('#landing-page')
+floridaLogo.addEventListener('mouseover', () => {
+    let clickHere = document.createElement('p')
+    clickHere.id = "click-here"
+    clickHere.textContent = "Click Here!!"
+    landingPage.append(clickHere)
+})
+
+floridaLogo.addEventListener('mouseout', () => {
+    let clickHere = document.querySelector('#click-here')
+    clickHere.remove()
+})
+
 floridaLogo.addEventListener("click", () => {
     document.getElementById("action-page").style.zIndex = "1";
 })
