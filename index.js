@@ -9,7 +9,9 @@ fetch("http://localhost:3000/florida_man")
 .then(response => response.json())
 .then(fmData => {
         grabTopTen(fmData)
-        renderFmDetails()
+        // renderTopTen()
+        // renderFmDetails()
+        // topTenClick()
 })
 
 function grabTopTen(fmData){
@@ -26,18 +28,19 @@ function renderTopTen(topTen){
         fmTitle1 = document.createElement('li')
         fmTitle1.classList.add("list-item")
         fmTitle1.textContent = fm.title
-        topTenList.append(fmTitle1)
-        
-    
-        
+        topTenList.append(fmTitle1)  
+
+        topTenClick(fm)
     })
 }
 
-
-let topTenClick = document.querySelectorAll(".list-item")
-    topTenClick.addEventListener('click', () => {
-        renderFmDetails(topTen)
+function topTenClick(fm) {   
+    fmTitle1.addEventListener('click', (e) => {
+        console.log(fm)
+        renderFmDetails(fm)
     })
+}
+
 
 
 function renderFmDetails(fm) {
@@ -55,11 +58,10 @@ function renderFmDetails(fm) {
     fmDate.textContent = currentFM.date
     fmTitle2.textContent = currentFM.title
     fmImage.src = currentFM.image
-    fmArticle.textContent = currentFM.article
-    fmArticleLink.href = currentFM.article_link
+    fmArticle.textContent = currentFM.Article
+    fmArticleLink.href = currentFM.Article_link
     fmLike.textContent = `${currentFM.likes} likes`
     fmDislike.textContent = `${currentFM.dislikes} dislikes`
-
 }
 
 
