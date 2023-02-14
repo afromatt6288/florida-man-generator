@@ -1,4 +1,5 @@
-let currentFM
+
+//// The Landing Page ////
 
 let floridaLogo = document.getElementById("florida-logo");
 let listItems = document.querySelectorAll(".list-item");
@@ -20,16 +21,24 @@ floridaLogo.addEventListener("click", () => {
     document.getElementById("action-page").style.zIndex = "1";
 })
 
+//// Global Variables ////
+
+let currentFM
+
+//// Our Fetch ////
+
 fetch("http://localhost:3000/florida_man")
 .then(response => response.json())
 .then(fmData => {
-        grabTopTen(fmData)
-        grabByDate(fmData)
-        // renderTopTen() // called within other functions
-        // renderFmDetails() // called within other functions
-        // topTenClick() // called within other functions
-    })
-        
+    grabTopTen(fmData)
+    grabByDate(fmData)
+    // renderTopTen() // called within other functions
+    // renderFmDetails() // called within other functions
+    // topTenClick() // called within other functions
+})
+
+//// Functions to create and populate the Top Ten List ////
+
 function grabTopTen(fmData){
     fmData
     .sort((a, b) => b.likes - a.likes)
@@ -50,6 +59,14 @@ function renderTopTen(topTen){
     })
 }
 
+//// Functions to render detail cards from the Top Ten or the Date form ////
+
+function topTenClick(fm) {   
+    fmSnippet.addEventListener('click', (e) => {
+        renderFmDetails(fm)
+    })
+}
+
 function grabByDate(fmData){
     let dateSubmitForm = document.querySelector("#form-container")
     dateSubmitForm.addEventListener("submit", (e) => {
@@ -59,13 +76,6 @@ function grabByDate(fmData){
         renderFmDetails(fmByDate)
     })
 }
-
-function topTenClick(fm) {   
-    fmSnippet.addEventListener('click', (e) => {
-        renderFmDetails(fm)
-    })
-}
-
 
 function renderFmDetails(fm) {
     currentFM = fm
@@ -86,6 +96,8 @@ function renderFmDetails(fm) {
     fmArticleLink.href = currentFM.Article_link
     fmLike.textContent = `${currentFM.likes} likes`
     fmDislike.textContent = `${currentFM.dislikes} dislikes`
+
+    //// Like Button Functionality ////
     
     fmLike.id = currentFM.id
     fmLike.addEventListener('click', (e) => {
@@ -106,6 +118,8 @@ function renderFmDetails(fm) {
             }) 
         })
     })
+
+    //// Dislike Button Functionality ////
 
     fmDislike.id = currentFM.id
     fmDislike.addEventListener('click', (e) => {
