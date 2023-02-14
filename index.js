@@ -106,8 +106,8 @@ function renderFmDetails(fm) {
     fmImage.src = currentFM.image
     fmArticle.textContent = currentFM.Article
     fmArticleLink.href = currentFM.Article_link
-    fmLike.textContent = `${currentFM.likes}`
-    fmDislike.textContent = `${currentFM.dislikes}`
+    fmLike.textContent = currentFM.likes
+    fmDislike.textContent = currentFM.dislikes
 
     //// Like Button Functionality ////
     
@@ -117,7 +117,7 @@ function renderFmDetails(fm) {
 
         currentFM.likes++
         let newLikes = currentFM.likes
-        fmLike.textContent = `${newLikes}`
+        fmLike.textContent = newLikes
         
         fetch(`http://localhost:3000/florida_man/${id}`, {
             method: "PATCH",
@@ -139,7 +139,7 @@ function renderFmDetails(fm) {
 
         currentFM.dislikes++
         let newDislikes = currentFM.dislikes
-        fmDislike.textContent = `${newDislikes}`
+        fmDislike.textContent = newDislikes
         
         fetch(`http://localhost:3000/florida_man/${id}`, {
             method: "PATCH",
