@@ -132,7 +132,7 @@ li:hover{
 .list-item{
     font-family: 'Caveat Brush', cursive;
     color: #F16F29;
-    font-size: 2vw;
+    font-size: 2.5vw;
     text-align: center;
     padding-top: 3px;
 }
@@ -141,6 +141,8 @@ li:hover{
     border:none;
     font-size: 35px;
     text-align: center;
+    padding-top:10px;
+    font-family: 'Jua', sans-serif;
 }
 
 #instructional-text{
@@ -195,13 +197,16 @@ li:hover{
 }
 
 #article-container{
-    height: 60%;
+    height: 50%;
     overflow-x: scroll;
     overflow-y: none;
+    margin-bottom: 10px;
 }
 
 #article{
     font-size: 20px;
+    font-weight: bold;
+    color: #a1a1a1;
 }
 
 #submit-button{
@@ -246,4 +251,54 @@ li:hover{
 #date{
     color: #4481eb;
     padding-bottom: 10px;
+}
+
+
+#up-arrow{
+    height:30px;
+    width:30px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+#up-arrow:hover{
+    cursor: pointer;
+    height:35px;
+    width:35px;
+}
+
+#down-arrow{
+    height:35px;
+    width:35px;
+    margin-top: 10px;
+    vertical-align: middle;
+}
+
+#down-arrow:hover{
+    cursor: pointer;
+    height:40px;
+    width:40px;
+}
+
+.like{
+    background: white;
+    border-radius: 20px;
+    border-color: transparent;
+    margin-right: 10px;
+    font-size: 25px;
+    margin-left: 110px;
+    margin-top: 15px;
+}
+
+.dislike{
+    background: white;
+    border-radius: 20px;
+    border-color: transparent;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+#link{
+    color: gray;
+    font-size: 15px;
 }
