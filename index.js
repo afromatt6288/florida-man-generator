@@ -32,6 +32,7 @@ fetch("http://localhost:3000/florida_man")
 .then(fmData => {
     grabTopTen(fmData)
     grabByDate(fmData)
+    grabAtRandom(fmData)
     // renderTopTen() // called within other functions
     renderFmDetails(fmData[0]) // used to populate card with 1st place entry, and also called within other functions
     // topTenClick() // called within other functions
@@ -55,12 +56,11 @@ function renderTopTen(topTen){
         fmSnippet.textContent = fm.snippet
         topTenList.append(fmSnippet)  
 
-        //renderFmDetails(fm[0])
         topTenClick(fm)
     })
 }
 
-//// Functions to render detail cards from the Top Ten or the Date form ////
+//// Functions to render detail cards from the Top Ten or the Date form or the random button////
 
 function topTenClick(fm) {   
     fmSnippet.addEventListener('click', (e) => {
@@ -76,6 +76,16 @@ function grabByDate(fmData){
         fmByDate = fmData.find(fm => fm.date === dateEntry)
         renderFmDetails(fmByDate)
     })
+}
+
+function grabAtRandom(fmData) {
+    let randomButton = document.querySelector('#randomize')
+    randomButton.addEventListener('click', (e) => {
+        const random = fmData[Math.floor(Math.random() * fmData.length)]
+        fmRandom = fmData.find(fm => fm.id === random)
+        renderFmDetails(random)
+    })
+
 }
 
 function renderFmDetails(fm) {
