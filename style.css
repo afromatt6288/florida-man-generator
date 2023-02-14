@@ -198,8 +198,8 @@ li:hover{
 
 #article-container{
     height: 50%;
-    overflow-x: scroll;
-    overflow-y: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
     margin-bottom: 10px;
 }
 

@@ -99,25 +99,27 @@ function renderFmDetails(fm) {
     let fmArticle = document.querySelector('#article')
     let fmArticleLink = document.querySelector('#link')
     let fmLike = document.querySelector('.like')
+    let fmLikeButton = document.querySelector('#up-arrow')
     let fmDislike = document.querySelector('.dislike')
+    let fmDislikeButton = document.querySelector('#down-arrow')
     
     fmDate.textContent = currentFM.date
     fmTitle.textContent = currentFM.title
     fmImage.src = currentFM.image
     fmArticle.textContent = currentFM.Article
     fmArticleLink.href = currentFM.Article_link
-    fmLike.textContent = `${currentFM.likes}`
-    fmDislike.textContent = `${currentFM.dislikes}`
+    fmLike.textContent = currentFM.likes
+    fmDislike.textContent = currentFM.dislikes
 
     //// Like Button Functionality ////
     
     fmLike.id = currentFM.id
-    fmLike.addEventListener('click', (e) => {
-        let id = e.target.id
+    fmLikeButton.addEventListener('click', (e) => {
+        let id = fmLike.id
 
         currentFM.likes++
         let newLikes = currentFM.likes
-        fmLike.textContent = `${newLikes}`
+        fmLike.textContent = newLikes
         
         fetch(`http://localhost:3000/florida_man/${id}`, {
             method: "PATCH",
@@ -134,12 +136,12 @@ function renderFmDetails(fm) {
     //// Dislike Button Functionality ////
 
     fmDislike.id = currentFM.id
-    fmDislike.addEventListener('click', (e) => {
-        let id = e.target.id
+    fmDislikeButton.addEventListener('click', (e) => {
+        let id = fmDislike.id
 
         currentFM.dislikes++
         let newDislikes = currentFM.dislikes
-        fmDislike.textContent = `${newDislikes}`
+        fmDislike.textContent = newDislikes
         
         fetch(`http://localhost:3000/florida_man/${id}`, {
             method: "PATCH",
