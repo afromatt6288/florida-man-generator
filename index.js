@@ -75,6 +75,7 @@ function grabByDate(fmData){
         const dateEntry = e.target['text-box'].value
         fmByDate = fmData.find(fm => fm.date === dateEntry)
         renderFmDetails(fmByDate)
+        dateSubmitForm.reset()
     })
 }
 
