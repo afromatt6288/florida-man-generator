@@ -36,8 +36,8 @@ fetch("http://localhost:3000/florida_man")
     // renderTopTen() // called within other functions
     renderFmDetails(fmData[0]) // used to populate card with 1st place entry, and also called within other functions
     // topTenClick() // called within other functions
-    addLikes(fmData)
-    addDislikes(fmData)
+    addLikes()
+    addDislikes()
 })
 
 //// Functions to create and populate the Top Ten List ////
@@ -94,14 +94,14 @@ function grabAtRandom(fmData) {
 function renderFmDetails(fm) {
     currentFM = fm
     // selectors for fm details
-    let fmDetails = document.querySelector('#render-card-here')
-    let fmDate = document.querySelector('#date')
-    let fmTitle = document.querySelector('#title')
-    let fmImage = document.querySelector('#image')
-    let fmArticle = document.querySelector('#article')
-    let fmArticleLink = document.querySelector('#link')
-    let fmLike = document.querySelector('.like')
-    let fmDislike = document.querySelector('.dislike')
+    fmDate = document.querySelector('#date')
+    fmTitle = document.querySelector('#title')
+    fmImage = document.querySelector('#image')
+    fmArticle = document.querySelector('#article')
+    fmArticleLink = document.querySelector('#link')
+    fmLike = document.querySelector('.like')
+    fmLikeButton = document.querySelector('#up-arrow')
+    fmDislike = document.querySelector('.dislike')
     
     fmDate.textContent = currentFM.date
     fmTitle.textContent = currentFM.title
@@ -117,15 +117,13 @@ function renderFmDetails(fm) {
 //// Like Button Functionality ////
 
 function addLikes(){
-    let fmLike = document.querySelector('.like')
-    let fmLikeButton = document.querySelector('#up-arrow')
+    fmLikeButton = document.querySelector('#up-arrow')
     fmLikeButton.addEventListener('click', () => {
-        let id = fmLike.id
+        let id = currentFM.id
         
-        currentLikes = fmLike.textContent
-        currentLikes++
-        let newLikes = currentLikes
-        fmLike.textContent = newLikes
+        currentFM.likes = currentFM.likes + 1
+        renderFmDetails(currentFM)
+        let newLikes = currentFM.likes
         
         fetch(`http://localhost:3000/florida_man/${id}`, {
             method: "PATCH",
@@ -143,15 +141,13 @@ function addLikes(){
 //// Dislike Button Functionality ////
 
 function addDislikes(){
-    let fmDislike = document.querySelector('.dislike')
-    let fmDislikeButton = document.querySelector('#down-arrow')
+    fmDislikeButton = document.querySelector('#down-arrow')
     fmDislikeButton.addEventListener('click', () => {
-        let id = fmDislike.id
-        
-        currentDislikes = fmDislike.textContent
-        currentDislikes++
-        let newDislikes = currentDislikes
-        fmDislike.textContent = newDislikes
+        let id = currentFM.id
+
+        currentFM.dislikes = currentFM.dislikes + 1
+        renderFmDetails(currentFM)
+        let newDislikes = currentFM.dislikes
         
         fetch(`http://localhost:3000/florida_man/${id}`, {
             method: "PATCH",
