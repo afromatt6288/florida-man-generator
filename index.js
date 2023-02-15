@@ -110,17 +110,6 @@ function renderFmDetails(fm) {
     fmArticleLink.href = currentFM.Article_link
     fmLike.textContent = currentFM.likes
     fmLike.id = currentFM.id
-<<<<<<< HEAD
-    let id = fmLike.id
-    fmLikeButton.addEventListener('click', (e) => {
-        let id = fmLike.id
-        currentFM.likes += 1
-        fmLike.textContent = currentFM.likes
-        patcher(currentFM);
-    })
-
-    function patcher(obj){
-=======
     fmDislike.textContent = currentFM.dislikes 
     fmDislike.id = currentFM.id   
 }
@@ -136,7 +125,6 @@ function addLikes(){
         renderFmDetails(currentFM)
         let newLikes = currentFM.likes
         
->>>>>>> 03bef072265d19c910568bbb3550ff6398b79a32
         fetch(`http://localhost:3000/florida_man/${id}`, {
             method: "PATCH",
             headers: {
@@ -144,15 +132,11 @@ function addLikes(){
                 "Accept": "application/json",
             },
             body: JSON.stringify({
-                "likes": currentFM.likes
+                "likes": newLikes
             }) 
         })
-<<<<<<< HEAD
-    }
-=======
     })
 }    
->>>>>>> 03bef072265d19c910568bbb3550ff6398b79a32
 
 //// Dislike Button Functionality ////
 
