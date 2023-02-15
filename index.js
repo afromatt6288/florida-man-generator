@@ -114,13 +114,15 @@ function renderFmDetails(fm) {
     //// Like Button Functionality ////
     
     fmLike.id = currentFM.id
+    let id = fmLike.id
     fmLikeButton.addEventListener('click', (e) => {
         let id = fmLike.id
+        currentFM.likes += 1
+        fmLike.textContent = currentFM.likes
+        patcher(currentFM);
+    })
 
-        currentFM.likes++
-        let newLikes = currentFM.likes
-        fmLike.textContent = newLikes
-        
+    function patcher(obj){
         fetch(`http://localhost:3000/florida_man/${id}`, {
             method: "PATCH",
             headers: {
@@ -128,10 +130,10 @@ function renderFmDetails(fm) {
                 "Accept": "application/json",
             },
             body: JSON.stringify({
-                "likes": newLikes
+                "likes": currentFM.likes
             }) 
         })
-    })
+    }
 
     //// Dislike Button Functionality ////
 
