@@ -326,6 +326,7 @@ li:hover{
 #date{
     color: #4481eb;
     padding-bottom: 10px;
+    font-size: 15px;
 }
 
 @media (max-width: 1166px){
@@ -397,5 +398,16 @@ li:hover{
         top:0;
         background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
         z-index: -1;
+    }
+    #down-arrow{
+        height:40px;
+        width:40px;
+    }
+    #up-arrow{
+        height:35px;
+        width:35px;
+    }
+    #click-here{
+        display: none;
     }
 }
