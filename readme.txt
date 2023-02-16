@@ -1,13 +1,47 @@
-seth changed this
-This webpage is like a daily calendar for "Florida Man" encounters. One using this page can enter in a date, and will recieve an article of something a Florida man did, on that date, that was worthy enough to be in the news. It will likely not be something positive...
+This webpage is like a daily calendar for "Florida Man" encounters. 
+One using this page can enter in a date, and will recieve an article of something a Florida man did, on that date, that was worthy enough to be in the news. 
+It will likely not be something positive...
 
-All 366 days have a generic entry, except for the following dates. 
+You can also click on the Dice next tothe submit button, and will get an article from a random date. 
+To the left you will see a top ten list. That is populated based on the number of likes an article has. You can add likes to an article, and when you refresh the page you will see the new order of the top ten list. 
+
+Due to the size of the database (and the fact this is a student project, not intended for public consumption) we did not populate every single entry with a unique article.
+Instead, most of the 366 days have a generic entry
+
+The list below will show the dates that have a non-generic article.
+At this time, there are 110 fleshed out entries. 
 
 JANUARY
+id: 2 date: 01/02
+id: 3 date: 01/03
 id: 4 date: 01/04
+id: 5 date: 01/05
 id: 6 date: 01/06
+id: 7 date: 01/07
 id: 8 date: 01/08
+id: 9 date: 01/09
+id: 10 date: 01/10
+id: 11 date: 01/11
+id: 12 date: 01/12
+id: 13 date: 01/13
+id: 14 date: 01/14
+id: 15 date: 01/15
 id: 16 date: 01/16
+id: 17 date: 01/17
+id: 18 date: 01/18
+id: 19 date: 01/19
+id: 20 date: 01/20
+id: 21 date: 01/21
+id: 22 date: 01/22
+id: 23 date: 01/23
+id: 24 date: 01/24
+id: 25 date: 01/25
+id: 26 date: 01/26
+id: 27 date: 01/27
+id: 28 date: 01/28
+id: 29 date: 01/29
+id: 30 date: 01/30
+id: 31 date: 01/31
 
 FEBRUARY
 
@@ -30,6 +64,7 @@ id: 144 date: 05/23
 id: 147 date: 05/26 
 
 JUNE
+id: 166 date: 06/14
 id: 169 date: 06/17
 
 JULY (all DONE!)
@@ -90,6 +125,7 @@ id: 311 date: 11/06
 id: 313 date: 11/08
 id: 315 date: 11/10
 id: 318 date: 11/13
+id: 320 date: 11/15
 id: 325 date: 11/20
 id: 328 date: 11/23
 id: 330 date: 11/25
