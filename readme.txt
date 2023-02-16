@@ -3,13 +3,22 @@ This webpage is like a daily calendar for "Florida Man" encounters. One using th
 
 All 366 days have a generic entry, except for the following dates. 
 
+JANUARY
 id: 4 date: 01/04
 id: 6 date: 01/06
 id: 8 date: 01/08
 id: 16 date: 01/16
+
+FEBRUARY
+
+MARCH
 id: 62 date: 03/02
 id: 82 date: 03/22
+
+APRIL
 id: 113 date: 04/22
+
+MAY
 id: 122 date: 05/01
 id: 126 date: 05/05
 id: 127 date: 05/06
@@ -19,8 +28,11 @@ id: 135 date: 05/14
 id: 139 date: 05/18
 id: 144 date: 05/23
 id: 147 date: 05/26 
+
+JUNE
 id: 169 date: 06/17
-ALL OF JULY is DONE!
+
+JULY (all DONE!)
 id: 183 date: 07/01
 id: 184 date: 07/02
 id: 185 date: 07/03
@@ -52,8 +64,26 @@ id: 210 date: 07/28
 id: 211 date: 07/29
 id: 212 date: 07/30
 id: 213 date: 07/31
+
+AUGUST
+id: 214 date: 08/01
+id: 215 date: 08/02
+id: 216 date: 08/03
+id: 217 date: 08/04
+id: 218 date: 08/05
+id: 219 date: 08/06
+id: 220 date: 08/07
+id: 221 date: 08/08
 id: 234 date: 08/21
+
+SEPTEMBER
+id: 261 date: 09/17
 id: 271 date: 09/27
+
+OCTOBER
+id: 300 date: 10/26
+
+NOVEMBER
 id: 309 date: 11/04
 id: 310 date: 11/05
 id: 311 date: 11/06
@@ -65,6 +95,9 @@ id: 328 date: 11/23
 id: 330 date: 11/25
 id: 331 date: 11/26 
 id: 333 date: 11/28
+id: 335 date: 11/30
+
+DECEMBER
 id: 338 date: 12/03
 id: 342 date: 12/07
 id: 343 date: 12/08
