@@ -1,3 +1,14 @@
+There are a couple steps that need to be completed in order to view this project properly in the browser. 
+This assumes you are running Node on your system... 
+
+Step 1: Have the repository cloned to your system
+Step 2: install JSON server on your machine. The below code installs it globally.
+      npm install -g json-server
+Step 3: run JSON server from within the florida-man-generator folder with the below code.
+     json-server -- watch db.json
+Step 4: open index.html within your browser through whatever means suits you best. I like to use Live Server...
+
+
 This webpage is like a daily calendar for "Florida Man" encounters. 
 One using this page can enter in a date, and will recieve an article of something a Florida man did, on that date, that was worthy enough to be in the news. 
 It will likely not be something positive...
