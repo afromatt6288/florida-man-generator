@@ -1,3 +1,14 @@
+# Florida Man Generator
+
+## Overview
+This webpage is like a daily calendar for "Florida Man" encounters. 
+One using this page can enter in a date, and will recieve an article of something a Florida man did, on that date, that was worthy enough to be in the news. 
+It will likely not be something positive...
+
+You can also click on the Dice next tothe submit button, and will get an article from a random date. 
+To the left you will see a top ten list. That is populated based on the number of likes an article has. You can add likes to an article, and when you refresh the page you will see the new order of the top ten list. 
+
+## Setup / Running the Project (on Windows)
 There are a couple steps that need to be completed in order to view this project properly in the browser. 
 This assumes you are running Node on your system... 
 
@@ -8,13 +19,7 @@ Step 3: run JSON server from within the florida-man-generator folder with the be
      json-server -- watch db.json
 Step 4: open index.html within your browser through whatever means suits you best. I like to use Live Server...
 
-
-This webpage is like a daily calendar for "Florida Man" encounters. 
-One using this page can enter in a date, and will recieve an article of something a Florida man did, on that date, that was worthy enough to be in the news. 
-It will likely not be something positive...
-
-You can also click on the Dice next tothe submit button, and will get an article from a random date. 
-To the left you will see a top ten list. That is populated based on the number of likes an article has. You can add likes to an article, and when you refresh the page you will see the new order of the top ten list. 
+## Other Info
 
 Due to the size of the database (and the fact this is a student project, not intended for public consumption) we did not populate every single entry with a unique article.
 Instead, most of the 366 days have a generic entry
